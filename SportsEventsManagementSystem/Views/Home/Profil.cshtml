@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "Profil";
+}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+    <div class="container-fluid pt-4 ml-1">
+        <div class="navbar-wrapper">
+            <a class="navbar-brand">@ViewBag.Message</a>
+        </div>
+        <div class="navbar-wrapper mr-2">
+            <a class="nav-link material-icons" style="color: #18ce0f; " onclick="logOut" href="~/Views/Home/LogOut.cshtml">logout</a>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+<div class="content pt-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-profile">
+                    <div class="card-body">
+                        <h6 class="card-category">CEO / Co-Founder</h6>
+                        <h4 class="card-title">Alec Thompson</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Bilgilerinizi Güncelleyin</h4>
+                        <p class="card-category">
+                            Bilgilerinizi güncellemek için eksiksiz doldurunuz.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Kullanıcı Adı</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Email Adresi</label>
+                                        <input type="email" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Adınız</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Soyadınız</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary pull-right">
+                                Bilgileri Güncelle
+                            </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Şifrenizi Güncelleyin</h4>
+                        <p class="card-category">
+                            Şifrenizi güncellemek için eksiksiz doldurunuz.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Eski Şifre</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Yeni Şifre</label>
+                                        <input type="email" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Yeni Şifre Tekrar</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary pull-right">
+                                Şifreyi Güncelle
+                            </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
