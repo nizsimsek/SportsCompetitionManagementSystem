@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsEventsManagementSystem", "SportsEventsManagementSystem\SportsEventsManagementSystem.csproj", "{9233D89F-BD10-47D1-B199-962337784E94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsCompetitionManagementSystem", "SportsEventsManagementSystem\SportsCompetitionManagementSystem.csproj", "{9233D89F-BD10-47D1-B199-962337784E94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

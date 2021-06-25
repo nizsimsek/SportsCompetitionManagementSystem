@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Kayıt Paneli";
+}
+@ViewBag.error
+<div class="content pt-4">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Kayıt Paneli</h4>
+                        <p class="card-category">
+                            Sisteme kayıt olabilmek için bilgileri eksiksiz doldurunuz.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("Register", "Home")">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Kullanıcı Adı</label>
+                                        <input type="text" class="form-control" name="username" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Email Adresi</label>
+                                        <input type="text" class="form-control" name="email" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Şifre</label>
+                                        <input type="password" class="form-control" name="password" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Şifre Onay</label>
+                                        <input type="password" class="form-control" name="passwordRepeat" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Adınız</label>
+                                        <input type="password" class="form-control" name="name" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Soyadınız</label>
+                                        <input type="password" class="form-control" name="surname" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary pull-right" value="Register">
+                                Kayıt Ol
+                            </button>
+                            <a class="d-flex" style="color: #18ce0f;" href="@Url.Action("Login", "Home")">
+                                <i class="material-icons">vpn_key</i>
+                                <p class="pl-1 text-white">Giriş Yap</p>
+                            </a>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,7 @@
             <a class="navbar-brand">@ViewBag.Message</a>
         </div>
         <div class="navbar-wrapper mr-2">
-            <a class="nav-link material-icons" style="color: #18ce0f; " onclick="logOut" href="~/Views/Home/LogOut.cshtml">logout</a>
+            <a class="nav-link material-icons" style="color: #18ce0f; " href="@Url.Action("Logout", "Home")">logout</a>
         </div>
     </div>
 </nav>
@@ -20,19 +20,14 @@
                 <div class="card card-stats">
                     <div class="card-header card-header-warning card-header-icon">
                         <div class="card-icon">
-                            <i class="material-icons">content_copy</i>
+                            <i class="material-icons">person</i>
                         </div>
-                        <p class="card-category">Used Space</p>
+                        <p class="card-category">Toplam Kullanıcı Sayısı</p>
                         <h3 class="card-title">
-                            49/50
-                            <small>GB</small>
+                            5210
                         </h3>
                     </div>
                     <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons text-warning">warning</i>
-                            <a href="#pablo" class="warning-link">Get More Space...</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -40,15 +35,12 @@
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                         <div class="card-icon">
-                            <i class="material-icons">store</i>
+                            <i class="material-icons">groups</i>
                         </div>
-                        <p class="card-category">Revenue</p>
-                        <h3 class="card-title">$34,245</h3>
+                        <p class="card-category">Toplam Oyuncu Sayısı</p>
+                        <h3 class="card-title">34,245</h3>
                     </div>
                     <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons">date_range</i> Last 24 Hours
-                        </div>
                     </div>
                 </div>
             </div>
@@ -56,16 +48,12 @@
                 <div class="card card-stats">
                     <div class="card-header card-header-danger card-header-icon">
                         <div class="card-icon">
-                            <i class="material-icons">info_outline</i>
+                            <i class="material-icons">sports</i>
                         </div>
-                        <p class="card-category">Fixed Issues</p>
+                        <p class="card-category">Toplam Hakem Sayısı</p>
                         <h3 class="card-title">75</h3>
                     </div>
                     <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons">local_offer</i> Tracked from
-                            Github
-                        </div>
                     </div>
                 </div>
             </div>
@@ -73,15 +61,12 @@
                 <div class="card card-stats">
                     <div class="card-header card-header-info card-header-icon">
                         <div class="card-icon">
-                            <i class="fa fa-twitter"></i>
+                            <i class="material-icons">fact_check</i>
                         </div>
-                        <p class="card-category">Followers</p>
-                        <h3 class="card-title">+245</h3>
+                        <p class="card-category">Müsabaka Sayısı</p>
+                        <h3 class="card-title">245</h3>
                     </div>
                     <div class="card-footer">
-                        <div class="stats">
-                            <i class="material-icons">update</i> Just Updated
-                        </div>
                     </div>
                 </div>
             </div>
@@ -97,36 +82,37 @@
                     </div>
                     <div class="card-body table-responsive">
                         <table class="table table-hover">
-                            <thead class="text-warning">
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Salary</th>
-                            <th>Country</th>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Ad</th>
+                                    <th>Soyad</th>
+                                    <th>Forma No</th>
+                                    <th>Uyruk</th>
+                                    <th>Doğum Tarihi</th>
+                                    <th>Takımı</th>
+                                </tr>
                             </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Ad</th>
+                                    <th>Soyad</th>
+                                    <th>Forma No</th>
+                                    <th>Uyruk</th>
+                                    <th>Doğum Tarihi</th>
+                                    <th>Takımı</th>
+                                </tr>
+                            </tfoot>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Dakota Rice</td>
-                                    <td>$36,738</td>
-                                    <td>Niger</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Minerva Hooper</td>
-                                    <td>$23,789</td>
-                                    <td>Curaçao</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Sage Rodriguez</td>
-                                    <td>$56,142</td>
-                                    <td>Netherlands</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Philip Chaney</td>
-                                    <td>$38,735</td>
-                                    <td>Korea, South</td>
+                                    <td>Niz</td>
+                                    <td>Şimşek</td>
+                                    <td>12</td>
+                                    <td>Türkiye</td>
+                                    <td>26.12.12</td>
+                                    <td>Fenerbahçe</td>
                                 </tr>
                             </tbody>
                         </table>

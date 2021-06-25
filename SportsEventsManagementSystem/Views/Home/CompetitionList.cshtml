@@ -1,14 +1,13 @@
 ﻿@{
     ViewBag.Title = "Müsabaka Listesi";
-}
-<!-- Navbar -->
+}<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
     <div class="container-fluid pt-4 ml-1">
         <div class="navbar-wrapper">
             <a class="navbar-brand">@ViewBag.Message</a>
         </div>
         <div class="navbar-wrapper mr-2">
-            <a class="nav-link material-icons" style="color: #18ce0f; " onclick="logOut" href="~/Views/Home/LogOut.cshtml">logout</a>
+            <a class="nav-link material-icons" style="color: #18ce0f; " href="@Url.Action("Logout", "Home")">logout</a>
         </div>
     </div>
 </nav>
@@ -22,146 +21,50 @@
                         <h4 class="card-title mt-0">Müsabaka Listesi</h4>
                         <br />
                         <a class="card-category text-white" style="font-size: 16px;" href="#">
-                            Ekle
+                            Müsabaka Ekle
                             <p class="material-icons" style="font-size: 20px;">add</p>
                         </a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-hover">
-                                <thead class="">
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>Salary</th>
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Ev Sahibi</th>
+                                        <th>Rakip</th>
+                                        <th>Hakem</th>
+                                        <th>Müsabaka Tarihi</th>
+                                        <th>Müsabaka Saati</th>
+                                        <th>Müsabaka Türü</th>
+                                        <th>İşlemler</th>
+                                    </tr>
                                 </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Ev Sahibi</th>
+                                        <th>Rakip</th>
+                                        <th>Hakem</th>
+                                        <th>Müsabaka Tarihi</th>
+                                        <th>Müsabaka Saati</th>
+                                        <th>Müsabaka Türü</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </tfoot>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dakota Rice</td>
-                                        <td>Niger</td>
-                                        <td>Oud-Turnhout</td>
-                                        <td>$36,738</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Minerva Hooper</td>
-                                        <td>Curaçao</td>
-                                        <td>Sinaai-Waas</td>
-                                        <td>$23,789</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sage Rodriguez</td>
-                                        <td>Netherlands</td>
-                                        <td>Baileux</td>
-                                        <td>$56,142</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Philip Chaney</td>
-                                        <td>Korea, South</td>
-                                        <td>Overland Park</td>
-                                        <td>$38,735</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Doris Greene</td>
-                                        <td>Malawi</td>
-                                        <td>Feldkirchen in Kärnten</td>
-                                        <td>$63,542</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Mason Porter</td>
-                                        <td>Chile</td>
-                                        <td>Gloucester</td>
-                                        <td>$78,615</td>
+                                        <td>Fenerbahçe</td>
+                                        <td>Galatasaray</td>
+                                        <td>Ali Orhan</td>
+                                        <td>26.12.12</td>
+                                        <td>16:15</td>
+                                        <td>Futbol</td>
+                                        <td>
+                                            <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdateCompetition", "Home")">update</a>
+                                            <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeleteCompetition", "Home")">delete</a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

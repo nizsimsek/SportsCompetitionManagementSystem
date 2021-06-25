@@ -9,7 +9,7 @@
             <a class="navbar-brand">@ViewBag.Message</a>
         </div>
         <div class="navbar-wrapper mr-2">
-            <a class="nav-link material-icons" style="color: #18ce0f; " onclick="logOut" href="~/Views/Home/LogOut.cshtml">logout</a>
+            <a class="nav-link material-icons" style="color: #18ce0f; " href="@Url.Action("Logout", "Home")">logout</a>
         </div>
     </div>
 </nav>
@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <div class="card card-profile">
                     <div class="card-body">
-                        <h6 class="card-category">CEO / Co-Founder</h6>
+                        <h4 class="card-header">@Session["Username"] Hoşgeldiniz..</h4>
                         <h4 class="card-title">Alec Thompson</h4>
                     </div>
                 </div>

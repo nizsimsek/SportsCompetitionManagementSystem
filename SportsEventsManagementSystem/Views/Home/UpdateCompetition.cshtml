@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Müsabaka Güncelle";
+}
+<div class="content pt-4">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Müsabaka Güncelle</h4>
+                        <p class="card-category">
+                            Güncelleme işlemi için bilgileri eksiksiz doldurunuz.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("UpdateCompetition", "Home")">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Ev Sahibi</label>
+                                        <input type="password" class="form-control" name="home" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Rakip</label>
+                                        <input type="password" class="form-control" name="away" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Hakem</label>
+                                        <input type="text" class="form-control" name="referee" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Müsabaka Türü</label>
+                                        <input type="text" class="form-control" name="typeofcomp" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Müsabaka Tarihi</label>
+                                        <input type="date" class="form-control" name="dateofcomp" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Müsabaka Saati</label>
+                                        <input type="time" class="form-control" name="timeofcomp" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary pull-right" value="UpdatePlayer">
+                                Güncelle
+                            </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

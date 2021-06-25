@@ -2,16 +2,50 @@
 @{
     ViewBag.Title = "Giriş Paneli";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
-</head>
-<body>
-    <div> 
+@ViewBag.error
+<div class="content pt-4">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Giriş Paneli</h4>
+                        <p class="card-category">
+                            Sisteme giriş yapmanız gerekmektedir.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("Login", "Home")">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Kullanıcı Adı</label>
+                                        <input type="text" class="form-control" name="username" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Şifre</label>
+                                        <input type="password" class="form-control" name="password" />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary pull-right" value="Login">
+                                Giriş Yap
+                            </button>
+                            <a class="d-flex" style="color: #18ce0f;" href="@Url.Action("RememberPassword", "Home")">
+                                <i class="material-icons">lock</i>
+                                <p class="pl-1 text-white">Parolamı Unuttum</p>
+                            </a>
+                            <a class="d-flex" style="color: #18ce0f;" href="@Url.Action("Register", "Home")">
+                                <i class="material-icons">how_to_reg</i>
+                                <p class="pl-1 text-white">Kayıt Ol</p>
+                            </a>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>

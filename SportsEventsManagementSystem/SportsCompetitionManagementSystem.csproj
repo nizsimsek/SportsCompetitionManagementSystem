@@ -166,7 +166,12 @@
     <Content Include="Views\Home\PlayerList.cshtml" />
     <Content Include="Views\Home\CompetitionList.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\LogOut.cshtml" />
+    <Content Include="Views\Home\Logout.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\RememberPassword.cshtml" />
+    <Content Include="Views\Home\UpdatePlayer.cshtml" />
+    <Content Include="Views\Home\UpdateReferee.cshtml" />
+    <Content Include="Views\Home\UpdateCompetition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
