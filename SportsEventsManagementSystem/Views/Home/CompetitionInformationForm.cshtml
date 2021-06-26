@@ -1,61 +1,69 @@
 ﻿
 @{
-    ViewBag.Title = "Müsabaka Güncelle";
+    ViewBag.Title = "Müsabaka Bilgi Formu";
 }
 <div class="content pt-4">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header card-header-primary">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Müsabaka ara.." />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group pt-2">
+                                <i class="material-icons text-white">search</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card pt-4">
+                    <div class="card-header card-header-primary text-center">
                         <h4 class="card-title">@ViewBag.Title</h4>
-                        <p class="card-category">
-                            Güncelleme işlemi için bilgileri eksiksiz doldurunuz.
-                        </p>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="@Url.Action("UpdateCompetition", "Home")">
+                        <form method="post" action="@Url.Action("AddCompetition", "Home")">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Ev Sahibi</label>
-                                        <input type="password" class="form-control" name="home" />
+                                        <label class="form-control">Fenerbahçe</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Rakip</label>
-                                        <input type="password" class="form-control" name="away" />
+                                        <label class="form-control">Galatasaray</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Hakem</label>
-                                        <input type="text" class="form-control" name="referee" />
+                                        <label class="form-control">Ali Vefa</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Müsabaka Türü</label>
-                                        <input type="text" class="form-control" name="typeofcomp" />
+                                        <label class="form-control">Futbol</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Müsabaka Tarihi</label>
-                                        <input type="date" class="form-control" name="dateofcomp" />
+                                        <label class="form-control">26.02.2021</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Müsabaka Saati</label>
-                                        <input type="time" class="form-control" name="timeofcomp" />
+                                        <label class="form-control">16:15</label>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right" value="UpdatePlayer">
-                                Güncelle
-                            </button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

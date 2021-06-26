@@ -1,6 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Müsabaka Listesi";
-}<!-- Navbar -->
+    ViewBag.Title = "Sonuç Listesi";
+}
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
     <div class="container-fluid pt-4 ml-1">
         <div class="navbar-wrapper">
@@ -18,10 +19,10 @@
             <div class="col-md-12">
                 <div class="card card-plain">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title mt-0">Müsabaka Listesi</h4>
+                        <h4 class="card-title mt-0">Sonuç Listesi</h4>
                         <br />
-                        <a class="card-category text-white" style="font-size: 16px;" href="@Url.Action("AddCompetition", "Home")">
-                            Müsabaka Ekle
+                        <a class="card-category text-white" style="font-size: 16px;" href="@Url.Action("AddScore", "Home")">
+                            Sonuç Ekle
                             <p class="material-icons" style="font-size: 20px;">add</p>
                         </a>
                     </div>
@@ -31,11 +32,11 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
+                                        <th>Müsabaka Id</th>
                                         <th>Ev Sahibi</th>
                                         <th>Rakip</th>
-                                        <th>Hakem</th>
-                                        <th>Müsabaka Tarihi</th>
-                                        <th>Müsabaka Saati</th>
+                                        <th>Ev Sahibi Skor</th>
+                                        <th>Rakip Skor</th>
                                         <th>Müsabaka Türü</th>
                                         <th>İşlemler</th>
                                     </tr>
@@ -43,11 +44,11 @@
                                 <tfoot>
                                     <tr>
                                         <th>Id</th>
+                                        <th>Müsabaka Id</th>
                                         <th>Ev Sahibi</th>
                                         <th>Rakip</th>
-                                        <th>Hakem</th>
-                                        <th>Müsabaka Tarihi</th>
-                                        <th>Müsabaka Saati</th>
+                                        <th>Ev Sahibi Skor</th>
+                                        <th>Rakip Skor</th>
                                         <th>Müsabaka Türü</th>
                                         <th>İşlemler</th>
                                     </tr>
@@ -55,15 +56,15 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
+                                        <td>103</td>
                                         <td>Fenerbahçe</td>
                                         <td>Galatasaray</td>
-                                        <td>Ali Orhan</td>
-                                        <td>26.12.12</td>
-                                        <td>16:15</td>
+                                        <td>2</td>
+                                        <td>1</td>
                                         <td>Futbol</td>
                                         <td>
-                                            <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdateCompetition", "Home")">update</a>
-                                            <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeleteCompetition", "Home")">delete</a>
+                                            <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdateScore", "Home")">update</a>
+                                            <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeleteScore", "Home")">delete</a>
                                         </td>
                                     </tr>
                                 </tbody>

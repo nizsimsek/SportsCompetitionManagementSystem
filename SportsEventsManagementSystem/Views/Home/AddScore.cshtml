@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Hakem Güncelle";
+    ViewBag.Title = "Sonuç Ekle";
 }
 <div class="content pt-4">
     <div class="container-fluid">
@@ -10,45 +10,51 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">@ViewBag.Title</h4>
                         <p class="card-category">
-                            Güncelleme işlemi için bilgileri eksiksiz doldurunuz.
+                            Ekleme işlemi için bilgileri eksiksiz doldurunuz.
                         </p>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="@Url.Action("UpdateReferee", "Home")">
+                        <form method="post" action="@Url.Action("AddScore", "Home")">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Adı</label>
-                                        <input type="password" class="form-control" name="name" />
+                                        <label class="bmd-label-floating">Müsabaka Id</label>
+                                        <input type="text" class="form-control" name="CopmId" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Soyadı</label>
-                                        <input type="password" class="form-control" name="surname" />
+                                        <label class="bmd-label-floating">Ev Sahibi</label>
+                                        <input type="text" class="form-control" name="Home" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Uyruk</label>
-                                        <input type="text" class="form-control" name="nationality" />
+                                        <label class="bmd-label-floating">Rakip</label>
+                                        <input type="text" class="form-control" name="Away" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Doğum Tarihi</label>
-                                        <input type="date" class="form-control" name="dateofbirth" />
+                                        <label class="bmd-label-floating">Ev Sahibi Skor</label>
+                                        <input type="text" class="form-control" name="HomeScore" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Görev Alanı</label>
-                                        <input type="text" class="form-control" name="field" />
+                                        <label class="bmd-label-floating">Rakip Skor</label>
+                                        <input type="text" class="form-control" name="AwayScore" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Müsabaka Türü</label>
+                                        <input type="text" class="form-control" name="CompType" />
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right" value="UpdateReferee">
-                                Güncelle
+                            <button type="submit" class="btn btn-primary pull-right" value="AddScore">
+                                Ekle
                             </button>
                             <div class="clearfix"></div>
                         </form>

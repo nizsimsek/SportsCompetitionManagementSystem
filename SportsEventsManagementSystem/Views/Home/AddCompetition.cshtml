@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Hakem Güncelle";
+    ViewBag.Title = "Müsabaka Ekle";
 }
 <div class="content pt-4">
     <div class="container-fluid">
@@ -10,45 +10,51 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">@ViewBag.Title</h4>
                         <p class="card-category">
-                            Güncelleme işlemi için bilgileri eksiksiz doldurunuz.
+                            Ekleme işlemi için bilgileri eksiksiz doldurunuz.
                         </p>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="@Url.Action("UpdateReferee", "Home")">
+                        <form method="post" action="@Url.Action("AddCompetition", "Home")">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Adı</label>
-                                        <input type="password" class="form-control" name="name" />
+                                        <label class="bmd-label-floating">Ev Sahibi</label>
+                                        <input type="password" class="form-control" name="home" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Soyadı</label>
-                                        <input type="password" class="form-control" name="surname" />
+                                        <label class="bmd-label-floating">Rakip</label>
+                                        <input type="password" class="form-control" name="away" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Uyruk</label>
-                                        <input type="text" class="form-control" name="nationality" />
+                                        <label class="bmd-label-floating">Hakem</label>
+                                        <input type="text" class="form-control" name="referee" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Doğum Tarihi</label>
-                                        <input type="date" class="form-control" name="dateofbirth" />
+                                        <label class="bmd-label-floating">Müsabaka Türü</label>
+                                        <input type="text" class="form-control" name="typeofcomp" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Görev Alanı</label>
-                                        <input type="text" class="form-control" name="field" />
+                                        <label class="bmd-label-floating">Müsabaka Tarihi</label>
+                                        <input type="date" class="form-control" name="dateofcomp" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Müsabaka Saati</label>
+                                        <input type="time" class="form-control" name="timeofcomp" />
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right" value="UpdateReferee">
-                                Güncelle
+                            <button type="submit" class="btn btn-primary pull-right" value="AddCompetition">
+                                Ekle
                             </button>
                             <div class="clearfix"></div>
                         </form>

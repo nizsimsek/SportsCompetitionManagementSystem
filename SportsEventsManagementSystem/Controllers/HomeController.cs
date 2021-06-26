@@ -25,7 +25,7 @@ namespace SportsEventsManagementSystem.Controllers
             }
             else
             {
-                ViewBag.error = "Yanlış kullanıcı adı veya şifre..";
+                ViewBag.ErrorMessage = "Kullanıcı adı veya şifre hatalı..";
                 return View();
             }
         }
@@ -53,6 +53,52 @@ namespace SportsEventsManagementSystem.Controllers
         }
 
         [HttpGet]
+        public ActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ForgotPassword(string username, string email)
+        {
+            if (username.Equals("acc1") && email.Equals("123@123.com"))
+            {
+                ViewBag.Message = "Giriş bilgileriniz için mail gönderildi..";
+                return View();
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Kullanıcı adı veya email hatalı..";
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public ActionResult AddPlayer()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AddReferee()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AddCompetition()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AddScore()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
         public ActionResult UpdatePlayer()
         {
             return View();
@@ -66,6 +112,12 @@ namespace SportsEventsManagementSystem.Controllers
 
         [HttpGet]
         public ActionResult UpdateCompetition()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult UpdateScore()
         {
             return View();
         }
@@ -111,6 +163,20 @@ namespace SportsEventsManagementSystem.Controllers
             }
         }
 
+        public ActionResult CompetitionInformationForm()
+        {
+            if (Session["Username"] != null)
+            {
+                ViewBag.Message = "Müsabaka Bilgi Formu";
+
+                return View();
+            }
+            else
+            {
+                return View("Login");
+            }
+        }
+
         public ActionResult RefereeList()
         {
             if (Session["Username"] != null)
@@ -125,6 +191,19 @@ namespace SportsEventsManagementSystem.Controllers
             }
         }
 
+        public ActionResult ScoreList()
+        {
+            if (Session["Username"] != null)
+            {
+                ViewBag.Message = "Sonuçlar";
+
+                return View();
+            }
+            else
+            {
+                return View("Login");
+            }
+        }
         public ActionResult Profil()
         {
             if (Session["Username"] != null)

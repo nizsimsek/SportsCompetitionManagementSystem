@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Hakem Güncelle";
+    ViewBag.Title = "Hakem Ekle";
 }
 <div class="content pt-4">
     <div class="container-fluid">
@@ -10,11 +10,11 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">@ViewBag.Title</h4>
                         <p class="card-category">
-                            Güncelleme işlemi için bilgileri eksiksiz doldurunuz.
+                            Ekleme işlemi için bilgileri eksiksiz doldurunuz.
                         </p>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="@Url.Action("UpdateReferee", "Home")">
+                        <form method="post" action="@Url.Action("AddReferee", "Home")">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -47,8 +47,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right" value="UpdateReferee">
-                                Güncelle
+                            <button type="submit" class="btn btn-primary pull-right" value="AddReferee">
+                                Ekle
                             </button>
                             <div class="clearfix"></div>
                         </form>

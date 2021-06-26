@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Hakem Güncelle";
+    ViewBag.Title = "Oyuncu Ekle";
 }
 <div class="content pt-4">
     <div class="container-fluid">
@@ -10,11 +10,11 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">@ViewBag.Title</h4>
                         <p class="card-category">
-                            Güncelleme işlemi için bilgileri eksiksiz doldurunuz.
+                            Ekleme işlemi için bilgileri eksiksiz doldurunuz.
                         </p>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="@Url.Action("UpdateReferee", "Home")">
+                        <form method="post" action="@Url.Action("AddPlayer", "Home")">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -26,6 +26,12 @@
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Soyadı</label>
                                         <input type="password" class="form-control" name="surname" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating">Forma Numarası</label>
+                                        <input type="text" class="form-control" name="number" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -42,13 +48,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Görev Alanı</label>
-                                        <input type="text" class="form-control" name="field" />
+                                        <label class="bmd-label-floating">Takımı</label>
+                                        <input type="text" class="form-control" name="team" />
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right" value="UpdateReferee">
-                                Güncelle
+                            <button type="submit" class="btn btn-primary pull-right" value="AddPlayer">
+                                Ekle
                             </button>
                             <div class="clearfix"></div>
                         </form>
