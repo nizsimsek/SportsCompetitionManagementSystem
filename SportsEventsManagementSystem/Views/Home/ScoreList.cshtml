@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<SportsEventsManagementSystem.Models.Score>
+@{
     ViewBag.Title = "Sonuç Listesi";
 }
 <!-- Navbar -->
@@ -54,19 +55,22 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>103</td>
-                                        <td>Fenerbahçe</td>
-                                        <td>Galatasaray</td>
-                                        <td>2</td>
-                                        <td>1</td>
-                                        <td>Futbol</td>
-                                        <td>
-                                            <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdateScore", "Home")">update</a>
-                                            <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeleteScore", "Home")">delete</a>
-                                        </td>
-                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.CompId</td>
+                                            <td>@item.Home</td>
+                                            <td>@item.Away</td>
+                                            <td>@item.HomeScore</td>
+                                            <td>@item.AwayScore</td>
+                                            <td>@item.CompType</td>
+                                            <td>
+                                                <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdateScore", "Home", new { id = item.Id})">update</a>
+                                                <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeleteScore", "Home", new { id = item.Id})">delete</a>
+                                            </td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>

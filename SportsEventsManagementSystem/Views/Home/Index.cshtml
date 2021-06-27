@@ -24,7 +24,7 @@
                         </div>
                         <p class="card-category">Toplam Kullanıcı Sayısı</p>
                         <h3 class="card-title">
-                            5210
+                            @ViewBag.UserCount
                         </h3>
                     </div>
                     <div class="card-footer">
@@ -38,7 +38,9 @@
                             <i class="material-icons">groups</i>
                         </div>
                         <p class="card-category">Toplam Oyuncu Sayısı</p>
-                        <h3 class="card-title">34,245</h3>
+                        <h3 class="card-title">
+                            @ViewBag.PlayerCount
+                        </h3>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -51,7 +53,9 @@
                             <i class="material-icons">sports</i>
                         </div>
                         <p class="card-category">Toplam Hakem Sayısı</p>
-                        <h3 class="card-title">75</h3>
+                        <h3 class="card-title">
+                            @ViewBag.RefereeCount
+                        </h3>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -64,7 +68,9 @@
                             <i class="material-icons">fact_check</i>
                         </div>
                         <p class="card-category">Müsabaka Sayısı</p>
-                        <h3 class="card-title">245</h3>
+                        <h3 class="card-title">
+                            @ViewBag.CompCount
+                        </h3>
                     </div>
                     <div class="card-footer">
                     </div>
@@ -77,7 +83,7 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Genç Oyuncular</h4>
                         <p class="card-category">
-                            En genç 10 oyuncu
+                            En genç 5 oyuncu
                         </p>
                     </div>
                     <div class="card-body table-responsive">
@@ -105,15 +111,18 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Niz</td>
-                                    <td>Şimşek</td>
-                                    <td>12</td>
-                                    <td>Türkiye</td>
-                                    <td>26.12.12</td>
-                                    <td>Fenerbahçe</td>
-                                </tr>
+                                @foreach (var item in ViewBag.YoungPlayer)
+                                {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Surname</td>
+                                        <td>@item.UniformNumber</td>
+                                        <td>@item.Nationality</td>
+                                        <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", @item.DateofBirth))</td>
+                                        <td>@item.Team</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -126,7 +135,7 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Müsabakalar</h4>
                         <p class="card-category">
-                            Yakın tarihteki 10 müsabakanın bilgisi
+                            Yakın tarihteki 5 müsabakanın bilgisi
                         </p>
                     </div>
                     <div class="card-body table-responsive">
@@ -154,15 +163,18 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Niz</td>
-                                    <td>Şimşek</td>
-                                    <td>12</td>
-                                    <td>Türkiye</td>
-                                    <td>26.12.12</td>
-                                    <td>Fenerbahçe</td>
-                                </tr>
+                                @foreach (var item in ViewBag.Comp)
+                                {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.Home</td>
+                                        <td>@item.Away</td>
+                                        <td>@item.Referee</td>
+                                        <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", @item.Date))</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.Type</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>

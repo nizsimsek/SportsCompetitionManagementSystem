@@ -1,4 +1,4 @@
-﻿
+﻿@model SportsEventsManagementSystem.Models.User
 @{
     ViewBag.Title = "Profil";
 }
@@ -21,7 +21,7 @@
                 <div class="card card-profile">
                     <div class="card-body">
                         <h4 class="card-header">@Session["Username"] Hoşgeldiniz..</h4>
-                        <h4 class="card-title">Alec Thompson</h4>
+                        <h4 class="card-title">@Session["Name"] @Session["Surname"]</h4>
                     </div>
                 </div>
             </div>
@@ -34,18 +34,18 @@
                         </p>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="post" action="@Url.Action("UpdateUser", "Home")">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Kullanıcı Adı</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" name="Username"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Email Adresi</label>
-                                        <input type="email" class="form-control" />
+                                        <input type="email" class="form-control" name="Email" />
                                     </div>
                                 </div>
                             </div>
@@ -53,17 +53,17 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Adınız</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" name="Name"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Soyadınız</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" name="Surname" />
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right">
+                            <button type="submit" class="btn btn-primary pull-right" value="UpdateUser" >
                                 Bilgileri Güncelle
                             </button>
                             <div class="clearfix"></div>
@@ -80,30 +80,28 @@
                         </p>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="post" action="@Url.Action("UpdateUserPassword", "Home")">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Eski Şifre</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="password" class="form-control" name="OldPassword"/>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Yeni Şifre</label>
-                                        <input type="email" class="form-control" />
+                                        <input type="password" class="form-control" name="Password" />
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Yeni Şifre Tekrar</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="password" class="form-control" name="NewPasswordRepeat" />
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right">
+                            <button type="submit" class="btn btn-primary pull-right" value="UpdateUserPassword">
                                 Şifreyi Güncelle
                             </button>
                             <div class="clearfix"></div>

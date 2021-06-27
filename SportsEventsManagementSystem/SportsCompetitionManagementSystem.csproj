@@ -133,11 +133,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Competitions.cs" />
-    <Compile Include="Models\Players.cs" />
-    <Compile Include="Models\Referees.cs" />
-    <Compile Include="Models\Scores.cs" />
-    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\Competition.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Referee.cs" />
+    <Compile Include="Models\Score.cs" />
+    <Compile Include="Models\SEMSContext.cs" />
+    <Compile Include="Models\SEMSInitilializer.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,14 +182,12 @@
     <Content Include="Views\Home\PlayerList.cshtml" />
     <Content Include="Views\Home\CompetitionList.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Logout.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\ForgotPassword.cshtml" />
     <Content Include="Views\Home\UpdatePlayer.cshtml" />
     <Content Include="Views\Home\UpdateReferee.cshtml" />
     <Content Include="Views\Home\UpdateCompetition.cshtml" />
     <Content Include="Views\Home\ScoreList.cshtml" />
-    <Content Include="Views\Home\CompetitionInformationForm.cshtml" />
     <Content Include="Views\Home\AddCompetition.cshtml" />
     <Content Include="Views\Home\AddReferee.cshtml" />
     <Content Include="Views\Home\AddPlayer.cshtml" />
@@ -196,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

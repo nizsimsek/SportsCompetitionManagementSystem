@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<SportsEventsManagementSystem.Models.Player>
+@{
     ViewBag.Title = "Oyuncu Listesi";
 }
 <!-- Navbar -->
@@ -54,19 +55,22 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Niz</td>
-                                        <td>Şimşek</td>
-                                        <td>12</td>
-                                        <td>Türkiye</td>
-                                        <td>26.12.12</td>
-                                        <td>Fenerbahçe</td>
-                                        <td>
-                                            <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdatePlayer", "Home")">update</a>
-                                            <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeletePlayer", "Home")">delete</a>
-                                        </td>
-                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.Surname</td>
+                                            <td>@item.UniformNumber</td>
+                                            <td>@item.Nationality</td>
+                                            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", @item.DateofBirth))</td>
+                                            <td>@item.Team</td>
+                                            <td>
+                                                <a class="material-icons pr-2" style="color: #18ce0f; cursor: pointer;" href="@Url.Action("UpdatePlayer", "Home", new { id = item.Id})">update</a>
+                                                <a class="material-icons" style="color: red; cursor: pointer;" href="@Url.Action("DeletePlayer", "Home", new { id = item.Id })">delete</a>
+                                            </td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>
